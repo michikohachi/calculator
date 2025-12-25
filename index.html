@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Calculator</title>
+  <link rel="icon" type="image/png/webp/jpg" href="img/doraemon-logo1.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator" role="application" aria-label="Calculator">
+    <img src="img/doraemonword.png" alt="Doraemon Calculator" class="calc-title">
+    <div class="display-wrap">
+      <div class="preview" id="preview" aria-hidden="true"></div>
+      <div class="display" id="display" aria-live="polite">0</div>
+    </div>
+    <div class="buttons">
+      <div class="btn spacer" aria-hidden="true"></div>
+      <button class="btn btn-ac" data-action="clear">AC</button>
+      <button class="btn" data-action="back">⌫</button>
+      <button class="btn" data-value="/">÷</button>
+
+      <button class="btn" data-value="7">7</button>
+      <button class="btn" data-value="8">8</button>
+      <button class="btn" data-value="9">9</button>
+      <button class="btn" data-value="*">×</button>
+
+      <button class="btn" data-value="4">4</button>
+      <button class="btn" data-value="5">5</button>
+      <button class="btn" data-value="6">6</button>
+      <button class="btn" data-value="-">−</button>
+
+      <button class="btn" data-value="1">1</button>
+      <button class="btn" data-value="2">2</button>
+      <button class="btn" data-value="3">3</button>
+      <button class="btn" data-value="+">+</button>
+
+      <button class="btn" data-value=".">.</button>
+      <button class="btn" data-value="0">0</button>
+      <button class="btn" data-value="%">%</button>
+      <button class="btn btn-eq" data-action="equals">=</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

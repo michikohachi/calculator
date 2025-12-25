@@ -1,0 +1,91 @@
+:root{
+  --btn:#e0e0e0;
+  --accent:#20a9db;
+  --text:#000000;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Roboto,Arial,sans-serif;
+  background:url('img/Anime_Doraemon_Wallpaper.jpg') center/cover no-repeat fixed;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:2rem;
+}
+.calculator{
+  width:360px;
+  max-width:96vw;
+  background: transparent(rgba(7,7,7,7));
+  backdrop-filter: blur(7px);
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(0,0,0,100);
+  padding:16px;
+}
+.calc-title{
+  width:100%;
+  max-width:300px;
+  height: 80px;
+  margin:0 auto 0 auto;
+  display:block;
+  object-fit:contain;
+}
+.display-wrap{
+  background:rgba(0, 0, 0, 0.2);
+  border-radius:8px;
+  padding:12px 18px;
+  margin-bottom:12px;
+  min-height:80px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.display{
+  color:var(--text);
+  font-size:2rem;
+  text-align:right;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.buttons{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+.btn{
+  background:linear-gradient(180deg,#c9c6c6,#e6e6e6);
+  border:0;
+  padding:0;
+  height:56px;
+  font-size:1.1rem;
+  border-radius:8px;
+  cursor:pointer;
+  box-shadow:0 4px rgba(0,0,0,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.btn.spacer{background:transparent;border:0;box-shadow:none;pointer-events:none}
+.btn.spacer:active{transform:none}
+.btn:active{transform:translateY(1px)}
+.btn-ac{background:#b60b0b;color:#fff}
+.btn-eq{background:var(--accent);color:#000000}
+.btn[disabled]{opacity:0.6;cursor:default}
+
+.preview{
+  color:rgb(240, 233, 233);
+  font-size:0.85rem;
+  text-align:right;
+  min-height:16px;
+  margin-bottom:4px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+@media (max-width:420px){
+  .calculator{width:320px}
+  .display{font-size:1.6rem}
+}
